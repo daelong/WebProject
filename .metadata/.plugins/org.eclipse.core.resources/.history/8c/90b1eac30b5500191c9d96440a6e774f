@@ -1,0 +1,14 @@
+package webproject;
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class BBSPostServlet extends HttpServlet{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		String name = request.getParameter("NAME");
+		String title = request.getParameter("TITLE");
+		
+	}
+
+}
