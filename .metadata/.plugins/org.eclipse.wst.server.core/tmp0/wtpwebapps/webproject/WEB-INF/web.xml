@@ -8,4 +8,20 @@
     <servlet-name>salary-servlet</servlet-name>
     <url-pattern>/salary</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>animal-servlet</servlet-name>
+    <servlet-class>webproject.AnimalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>animal-servlet</servlet-name>
+    <url-pattern>/animal</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>result-servlet</servlet-name>
+    <servlet-class>webproject.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>result-servlet</servlet-name>
+    <url-pattern>/result</url-pattern>
+  </servlet-mapping>
 </web-app>
