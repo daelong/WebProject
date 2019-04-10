@@ -24,4 +24,20 @@
     <servlet-name>result-servlet</servlet-name>
     <url-pattern>/result</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <servlet-name>BBSPost-servlet</servlet-name>
+    <servlet-class>webproject.BBSPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BBSPost-servlet</servlet-name>
+    <url-pattern>/BBSPost</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FourRules-servlet</servlet-name>
+    <servlet-class>webproject.FourRulesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FourRules-servlet</servlet-name>
+    <url-pattern>/FourRules</url-pattern>
+  </servlet-mapping>
 </web-app>

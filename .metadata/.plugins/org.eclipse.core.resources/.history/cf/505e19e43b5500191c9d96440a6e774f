@@ -1,9 +1,0 @@
-package webproject;
-
-public class LevelTest {
-
-	public static void main(String[] args) {
-
-	}
-
-}
