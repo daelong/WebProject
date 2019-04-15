@@ -9,9 +9,10 @@ import Model.BBSPostModel;
 
 public class BBSPost extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-		String name = request.getParameter("NAME");
-		String title = request.getParameter("TITLE");
-		String content = request.getParameter("CONTENT");
+		request.setCharacterEncoding("euc-kr");
+		String name = (String)request.getParameter("NAME");
+		String title = (String)request.getParameter("TITLE");
+		String content = (String)request.getParameter("CONTENT");
 		Date date = new Date();
 		Long time = date.getTime();
 		String filename = time + ".txt";

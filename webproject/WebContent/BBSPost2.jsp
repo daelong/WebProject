@@ -1,11 +1,5 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=euc-kr"%>
 <%@ page import="java.io.*"%>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>게시글 저장</title>
-</head>
-<body>
 <%
 	String name = (String)session.getAttribute("NAME");
 	String title = (String)session.getAttribute("TITLE");
@@ -14,7 +8,7 @@
 	String result;
 	PrintWriter writer = null;
 	try{
-		String filePath = application.getRealPath("/WEB-INF/bbs" + filename);
+		String filePath = application.getRealPath("/WEB-INF/bbs/" + filename);
 		writer = new PrintWriter(filePath);
 		writer.println("이름 : " + name);
 		writer.println("제목 : " + title);
@@ -30,7 +24,6 @@
 		catch(Exception e){
 		}
 	}
+	session.invalidate();
 	response.sendRedirect("BBSPostResult.jsp?RESULT=" + result);
 %>
-</body>
-</html>

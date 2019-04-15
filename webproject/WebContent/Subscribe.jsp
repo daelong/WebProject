@@ -10,7 +10,7 @@
 		String filename = id + ".txt";
 		PrintWriter writer = null;
 		try{
-			String filePath = application.getRealPath("/WEB-INF/bbs" + filename);
+			String filePath = application.getRealPath("/WEB-INF/bbs/" + filename);
 			writer = new PrintWriter(filePath);
 			writer.println("아이디" + id);
 			writer.println("패스워드" + password);

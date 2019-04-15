@@ -9,7 +9,7 @@ public class AnimalServlet extends HttpServlet{
 		String food = request.getParameter("FOOD");
 		HttpSession session = request.getSession();
 		session.setAttribute("FOOD", food);
-		response.setContentType("text/html;charset=euc-kr");
+		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<HTML>");
 		out.println("<HEAD><TITLE>성격테스트</TITLE></HEAD>");
