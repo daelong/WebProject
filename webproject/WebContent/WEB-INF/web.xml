@@ -40,4 +40,12 @@
     <servlet-name>FourRules-servlet</servlet-name>
     <url-pattern>/FourRules</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Subscribe-servlet</servlet-name>
+    <servlet-class>webproject.Subscribe</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Subscribe-servlet</servlet-name>
+    <url-pattern>/Subscribe</url-pattern>
+  </servlet-mapping>
 </web-app>

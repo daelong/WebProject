@@ -4,4 +4,5 @@
 <fullyQualifiedTypeName name="Model.BBSPostModel"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="Model.FourRulesModel"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>

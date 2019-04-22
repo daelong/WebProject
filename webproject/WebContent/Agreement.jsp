@@ -19,7 +19,7 @@
 	1. 회원 정보는 웹 사이트의 운영을 위해서만 사용됩니다.<BR>
 	2. 웹 사이트의 정상 운영을 방해하는 회원은 탈퇴 처리합니다.<BR>
 	--------------------------------<BR>
-	<FORM ACTION=Subscribe.jsp METHOD=POST>
+	<FORM ACTION=Subscribe METHOD=POST>
 		위의 약관에 동의하십니까?
 		<INPUT TYPE=RADIO NAME=AGREE VALUE=YES>동의함
 		<INPUT TYPE=RADIO NAME=AGREE VALUE=NO>동의하지 않음<BR><BR>
