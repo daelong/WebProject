@@ -48,4 +48,12 @@
     <servlet-name>Subscribe-servlet</servlet-name>
     <url-pattern>/Subscribe</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <servlet-name>Custommer-servlet</servlet-name>
+    <servlet-class>webproject.CustomerInfoSetting</servlet-class>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>Custommer-servlet</servlet-name>
+    <url-pattern>/Customer</url-pattern>
+  </servlet-mapping>
 </web-app>
