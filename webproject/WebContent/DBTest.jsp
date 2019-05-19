@@ -10,7 +10,7 @@
 		if(conn == null)
 			throw new Exception("데이터베이스에 연결할 수 없습니다.<br>");
 		stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("select * from goodsinfo where code='" + code + "':");
+		ResultSet rs = stmt.executeQuery("select * from goodsinfo where code='" + code + "';");
 		if(rs.next()){
 			String title = rs.getString("title");
 			String writer = rs.getString("writer");

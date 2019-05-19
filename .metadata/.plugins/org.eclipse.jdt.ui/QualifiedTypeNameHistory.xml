@@ -6,4 +6,9 @@
 <fullyQualifiedTypeName name="Model.FourRulesModel"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 <fullyQualifiedTypeName name="mall.PersonnalInfo"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="mall.BoardVo"/>
+<fullyQualifiedTypeName name="mall.Board"/>
+<fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+<fullyQualifiedTypeName name="mall.Cart"/>
 </qualifiedTypeNameHistroy>
