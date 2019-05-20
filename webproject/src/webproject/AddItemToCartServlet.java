@@ -1,3 +1,4 @@
+//장바구니에 게시글을 담는 서블릿 클래스
 package webproject;
 
 import java.io.*;

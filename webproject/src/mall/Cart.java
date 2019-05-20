@@ -1,3 +1,4 @@
+//장바구니 데이터를 표현하는 클래스
 package mall;
 
 import java.util.LinkedList;

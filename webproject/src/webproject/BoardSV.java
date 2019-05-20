@@ -35,9 +35,9 @@ public class BoardSV extends HttpServlet {
 		Statement stmt = null;
 		try {
 			Class.forName(
-					"org.apache.commons.dbcp.PoolingDriver");
+					"com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(
-					"jdbc:apache:commons:dbcp:/wdbpool");
+					"jdbc:mysql://localhost:3306/webdb?serverTimezone=UTC","root","root");
 			if(conn == null)
 				throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			stmt = conn.createStatement();
