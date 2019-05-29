@@ -4,33 +4,30 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.sql.*;
-import mall.Board;
+import mall.BoardList;
 
-public class BoardSV extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class BoardListServlet extends HttpServlet {
+//	private static final long serialVersionUID = 1L;
 	public void doGet(HttpServletRequest request,
 			          HttpServletResponse response)
 	                  throws IOException, ServletException {
-		String strUpperBoardID =
-				request.getParameter("LAST_BOARD_ID");
-		int upperBoardID;
-		if (strUpperBoardID == null)
-			upperBoardID = Integer.MAX_VALUE;
+		String strUpperSeqNo =
+				request.getParameter("LAST_SEQ_NO");
+		int upperSeqNo;
+		if (strUpperSeqNo == null)
+			upperSeqNo = Integer.MAX_VALUE;
 		else
-			upperBoardID = Integer.parseInt(strUpperBoardID);
-		Board list = readDB(upperBoardID);
+			upperSeqNo = Integer.parseInt(strUpperSeqNo);
+		BoardList list = readDB(upperSeqNo);
 		request.setAttribute("Board_List", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(
-				                               "경로명"); //13-7 경로명
+				                               "BoardListView.jsp"); //13-7 경로명
 		dispatcher.forward(request, response);
 	}
 
-	private Board readDB(int upperBoardID) 
+	private BoardList readDB(int upperSeqNo) 
 		throws ServletException{
-		Board list = new Board();
+		BoardList list = new BoardList();
 		Connection conn = null;
 		Statement stmt = null;
 		try {
@@ -42,18 +39,14 @@ public class BoardSV extends HttpServlet {
 				throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(
-					"select * from board where boardID < " +
-					upperBoardID + " order by boardID desc;");
+					"select * from boardinfo1 where seqNo <" +
+					upperSeqNo + " order by seqno desc;");
 			for (int cnt = 0; cnt < 5; cnt++) {
 				if(!rs.next())
 					break;
-				list.setBoardID(cnt, rs.getInt("boardID"));
-				list.setName(cnt, toUnicode(
-						rs.getString("name")));
-				list.setTitle(cnt, toUnicode(
-						rs.getString("title")));
-				list.setBoard(cnt, toUnicode(
-						rs.getString("board")));
+				list.setSeqNo(cnt, rs.getInt("seqNo"));
+				list.setWriter(cnt, rs.getString("writer"));
+				list.setTitle(cnt, rs.getString("title"));
 				list.setDate(cnt, rs.getDate("date"));
 				list.setTime(cnt, rs.getTime("time"));
 			}

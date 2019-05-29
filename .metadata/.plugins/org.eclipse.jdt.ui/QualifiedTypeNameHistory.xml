@@ -13,4 +13,7 @@
 <fullyQualifiedTypeName name="mall.Cart"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
+<fullyQualifiedTypeName name="mall.BBSItem"/>
+<fullyQualifiedTypeName name="mall.BoardItem"/>
+<fullyQualifiedTypeName name="mall.Reader"/>
 </qualifiedTypeNameHistroy>

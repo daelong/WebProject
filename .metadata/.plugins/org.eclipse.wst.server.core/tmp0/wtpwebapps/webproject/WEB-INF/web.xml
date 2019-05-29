@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <servlet>
-    <servlet-name>salary-servlet</servlet-name>
-    <servlet-class>webproject.SalaryServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>salary-servlet</servlet-name>
-    <url-pattern>/salary</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>animal-servlet</servlet-name>
-    <servlet-class>webproject.AnimalServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>animal-servlet</servlet-name>
-    <url-pattern>/animal</url-pattern>
-  </servlet-mapping>
-    <servlet>
-    <servlet-name>result-servlet</servlet-name>
-    <servlet-class>webproject.ResultServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>result-servlet</servlet-name>
-    <url-pattern>/result</url-pattern>
-  </servlet-mapping>
-   <servlet>
     <servlet-name>BBSPost-servlet</servlet-name>
     <servlet-class>webproject.BBSPost</servlet-class>
   </servlet>
@@ -48,12 +24,52 @@
     <servlet-name>Subscribe-servlet</servlet-name>
     <url-pattern>/Subscribe</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <servlet-name>Custommer-servlet</servlet-name>
     <servlet-class>webproject.CustomerInfoSetting</servlet-class>
   </servlet>
-   <servlet-mapping>
+  <servlet-mapping>
     <servlet-name>Custommer-servlet</servlet-name>
     <url-pattern>/Customer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BoardList-servlet</servlet-name>
+    <servlet-class>webproject.BoardListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardList-servlet</servlet-name>
+    <url-pattern>/Board</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddCartList-servlet</servlet-name>
+    <servlet-class>webproject.AddItemToCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCartList-servlet</servlet-name>
+    <url-pattern>/add-item-to-cart</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CartList-servlet</servlet-name>
+    <servlet-class>webproject.CartListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartList-servlet</servlet-name>
+    <url-pattern>/cart-list</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Reader-servlet</servlet-name>
+    <servlet-class>webproject.ReaderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Reader-servlet</servlet-name>
+    <url-pattern>/Reader</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Updater-servlet</servlet-name>
+    <servlet-class>webproject.Updater</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Updater-servlet</servlet-name>
+    <url-pattern>/Update</url-pattern>
   </servlet-mapping>
 </web-app>
